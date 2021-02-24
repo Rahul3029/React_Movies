@@ -9,7 +9,7 @@ const Movies: React.FC = props => {
     const [movies,setMovies] = useState([])
     useEffect(() => {
         const promise = series.map(series => {
-           return fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(series)}&apikey=${API_Key}&page=1`)
+           return fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(series)}&apikey=${API_Key}`)
             .then(res => res.json())
         })
         
